@@ -9,32 +9,34 @@
   <body>
     <h1>Kemana Anda ingin pergi ?</h1>
     <ul class="lokasi">
-        <li class="bandung">Bandung</li>
-        <li class="surabaya"><strong>Surabaya</strong></li>
-        <li>Jakarta</li>
-        <li><input type="text" class="inputan" value="Malang"></li>
+      <li class="bandung">
+        Bandung
+        <button id="keBandung">Klik</button>
+        <button id="hapusBandung">X</button>
+      </li>
+      <br>
+      <li class="surabaya">
+          Surabaya
+          <button>Klik</button>
+        </li>
+        <br>
+        <li class="jakarta">
+            Jakarta
+            <button>Klik</button>
+        </li>
+        <br>
     </ul>
-    <script>
-        $(document).ready(function()
-        {
-            // var jogja = $('<li>Yogyakarta</li>');
-            // var bali = $('<li>Bali</li>');
-            // var subjudul = $('<h2>Pilih Tujuan Anda</h2>');
-            // var penutup = $('<h3>Terima kasih</h3>');
 
-            // jogja.prependTo($('.lokasi'));
-            // bali.appendTo($('.lokasi'));
-            // subjudul.insertBefore($('.lokasi'));
-            // penutup.insertAfter($('.lokasi'));
-        });
-        </script>
-        <script>
-            $(document).ready(function(){
-                // console.log($('.inputan').val());
-                $('.bandung').remove();
-                $('.surabaya').empty();
-                $('.inputan').val('Semarang');
-            })
-        </script>
+    <script>
+      $(document).ready(function () {
+        $('#keBandung').on('click', function(){
+            alert('Anda akan menuju ke Bandung');
+        })
+        $('#hapusBandung').on('click', function(){
+            $('.bandung').remove();
+            alert('Lokasi Bandung telah dihapus');
+        })
+      });
+    </script>
   </body>
 </html>
