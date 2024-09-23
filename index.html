@@ -7,6 +7,16 @@
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
+    <style>
+        .merah
+        {
+         color: red;
+        }
+        .biru
+        {
+         color: blue;
+        }
+        </style>
     <h1>Kemana Anda ingin pergi ?</h1>
     <ul class="lokasi">
       <li class="bandung">
@@ -14,6 +24,9 @@
         <button id="keBandung">Klik</button>
         <button id="hapusBandung">X</button>
         <button id="hideBandung">H</button>
+        <button class="gantiWarna">M</button>
+        <button class="gantiWarna2">B</button>
+        <button class="jadiBesar">B</button>
       </li>
       <br>
       <li class="surabaya">
@@ -45,6 +58,25 @@
             $('.bandung').fadeToggle(2000);
         })
       });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('.bandung').addClass('biru');
+            $('.gantiWarna').on('click', function(){
+                $('.bandung').removeClass('biru');
+                $('.bandung').addClass('merah');
+            })
+            $('.gantiWarna2').on('click', function(){
+                $('.bandung').removeClass('merah');
+                $('.bandung').addClass('biru');
+            })
+            $('.jadiBesar').on('click', function(){
+                $('.bandung').css({
+                    fontSize: 100
+                });
+            })
+        })
     </script>
   </body>
 </html>
