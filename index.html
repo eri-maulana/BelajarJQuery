@@ -13,6 +13,7 @@
         Bandung
         <button id="keBandung">Klik</button>
         <button id="hapusBandung">X</button>
+        <button id="hideBandung">H</button>
       </li>
       <br>
       <li class="surabaya">
@@ -26,6 +27,7 @@
         </li>
         <br>
     </ul>
+    <button class="toggleBandung">Toggle</button>
 
     <script>
       $(document).ready(function () {
@@ -35,6 +37,12 @@
         $('#hapusBandung').on('click', function(){
             $('.bandung').remove();
             alert('Lokasi Bandung telah dihapus');
+        })
+        $('#hideBandung').on('click', function(){
+            $('.bandung').slideUp(2000);
+        })
+        $('.toggleBandung').on('click', function(){
+            $('.bandung').fadeToggle(2000);
         })
       });
     </script>
