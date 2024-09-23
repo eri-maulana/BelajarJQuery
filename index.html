@@ -7,30 +7,29 @@
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <h1>Where do want to go?</h1>
-    <h2 class="sample">Travel Destinations</h2>
-    <p>Plan your next adventure</p>
     <ul id="destinations">
-      <li>Rome</li>
-      <li>Paris</li>
-      <li class="promo">Rio</li>
+      <li>Bandung</li>
+      <li>Jakarta</li>
+      <ul>
+        <li>Jakarta Pusat</li>
+        <li>Jakarta Utara</li>
+        <li>Jakarta Selatan</li>
+        <li>Jakarta Barat</li>
+        <li class="promo">Jakarta Timur</li>
+      </ul>
+      <li>Surabaya</li>
+      <li>Bali</li>
+      <li id="france">France</li>
     </ul>
     <button>Aksi</button>
 
     <script>
-        $(document).ready(function(){
-          $("button").click(function(){
-            $(".sample").hide();
-          });
+      $(document).ready(function () {
+        $('button').click(function(){
+            $('#destinations li:prev').css('background-color', 'green');
+            $('#destinations li:even').css('background-color', 'red');
         });
-        </script>
-
-        <script>
-            $(document).ready(function(){
-                $("button").click(function(){
-                    $(".promo").text("Bali");
-                })
-            })
-        </script>
+      });
+    </script>
   </body>
 </html>
