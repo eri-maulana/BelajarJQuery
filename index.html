@@ -4,79 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Latihan JQuery</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <script src="jquery-3.7.1.min.js"></script>
   </head>
   <body>
-    <style>
-        .merah
-        {
-         color: red;
-        }
-        .biru
-        {
-         color: blue;
-        }
-        </style>
-    <h1>Kemana Anda ingin pergi ?</h1>
-    <ul class="lokasi">
-      <li class="bandung">
-        Bandung
-        <button id="keBandung">Klik</button>
-        <button id="hapusBandung">X</button>
-        <button id="hideBandung">H</button>
-        <button class="gantiWarna">M</button>
-        <button class="gantiWarna2">B</button>
-        <button class="jadiBesar">B</button>
-      </li>
-      <br>
-      <li class="surabaya">
-          Surabaya
-          <button>Klik</button>
-        </li>
-        <br>
-        <li class="jakarta">
-            Jakarta
-            <button>Klik</button>
-        </li>
-        <br>
-    </ul>
-    <button class="toggleBandung">Toggle</button>
+    <div class="your-class">
+      <div>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
+          dapibus neque. Nullam ut dignissim neque. Donec auctor, justo sed
+          tempus faucibus, arcu massa ultricies risus, id congue velit velit in
+          justo. Integer fermentum, orci vel viverra venenatis, nisi velit
+          bibendum neque, in consectetur neque dolor a enim. Duis eleifend,
+          purus vel consectetur consectetur, lectus quam ornare lectus,
+        </p>
+      </div>
+      <div>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti enim
+          atque animi eos, consequatur ex sint minus totam impedit minima!
+          Cupiditate blanditiis ea quo et incidunt sunt eligendi atque, dolore
+          facilis quod ut. Soluta corporis eaque odit cupiditate esse nostrum
+          culpa, perferendis officia! Soluta, fugiat nostrum alias explicabo
+          dolorum perferendis!
+        </p>
+      </div>
+      <div>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
+          obcaecati hic nobis, accusantium a rem sed, ad molestiae ipsum magni
+          ratione. Voluptatem suscipit magnam dignissimos cumque veniam placeat,
+          sint dicta facilis sapiente quia sequi libero ex id? Neque tempore
+          assumenda ab maiores dicta animi beatae porro laboriosam optio
+          mollitia cumque voluptas soluta dolorum eum est ratione ipsum
+          obcaecati numquam voluptate suscipit quidem dignissimos, veniam
+          adipisci eaque. Recusandae esse fugiat et.
+        </p>
+      </div>
+    </div>
 
+    <!-- Add an optional button to open the popup -->
+    <button class="my_popup_open">Open popup</button>
+
+    <!-- Add content to the popup -->
+    <div id="my_popup">
+      ...popup content...
+
+      <!-- Add an optional button to close the popup -->
+      <button class="my_popup_close">Close</button>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="http://vast-eng.github.io/jquery-popup-overlay/jquery.popupoverlay.js"></script>
     <script>
       $(document).ready(function () {
-        $('#keBandung').on('click', function(){
-            alert('Anda akan menuju ke Bandung');
-        })
-        $('#hapusBandung').on('click', function(){
-            $('.bandung').remove();
-            alert('Lokasi Bandung telah dihapus');
-        })
-        $('#hideBandung').on('click', function(){
-            $('.bandung').slideUp(2000);
-        })
-        $('.toggleBandung').on('click', function(){
-            $('.bandung').fadeToggle(2000);
-        })
+        $(".your-class").slick({});
+        $("#my_popup").popup();
       });
-    </script>
-
-    <script>
-        $(document).ready(function(){
-            $('.bandung').addClass('biru');
-            $('.gantiWarna').on('click', function(){
-                $('.bandung').removeClass('biru');
-                $('.bandung').addClass('merah');
-            })
-            $('.gantiWarna2').on('click', function(){
-                $('.bandung').removeClass('merah');
-                $('.bandung').addClass('biru');
-            })
-            $('.jadiBesar').on('click', function(){
-                $('.bandung').css({
-                    fontSize: 100
-                });
-            })
-        })
     </script>
   </body>
 </html>
